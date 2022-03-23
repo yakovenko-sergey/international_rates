@@ -1,0 +1,214 @@
+.country-rates__input-container{
+    width:100%;
+    position: relative;
+}
+
+.country-rates__input{
+    background-color: #fff;
+    height: 50px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #b7ada5;
+    display:block;
+    width:100%;
+    padding:0 20px;
+    cursor: pointer;
+}
+
+.country-rates__input:focus {
+    outline: none;
+}
+
+.country-rates__input-container:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 35%;
+    width: 10px;
+    height: 10px;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #b9b9b9;
+    transform: rotate(135deg);
+    transition: transform .3s ease;
+    pointer-events: none;
+}
+
+.country-rates_open:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 35%;
+    width: 10px;
+    height: 10px;
+    border-width: 2px 2px 0 0;
+    border-style: solid;
+    border-color: #b9b9b9;
+    transform: rotate(315deg);
+    transition: transform .3s ease;
+    pointer-events: none;
+}
+
+.country-rates__country-list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 10px 0;
+    background-color: #fff;
+    max-height: 300px;
+    overflow-y: scroll;
+    box-shadow: -1px 1px 3px 0px #a7a7a7;
+    font-size: 1em;
+    z-index: 1;
+}
+
+.country-rates_open > .country-rates__country-list{
+    display: block;
+}
+
+.country-rates__item{
+    position: relative;
+    padding: 5px 0 5px 30px;
+    font-size: .9em;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select:none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.country-rates__item:hover{
+    cursor: pointer;
+    background: #a7a7a7;
+}
+
+.country-rates_selected{
+    font-weight: bold;
+}
+
+.country-rates_selected:before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    transform: rotate(45deg);
+    left: 8px;
+    top: 15px;
+    background: black;
+}
+
+.country-rates_selected:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    transform: rotate(-45deg);
+    left: 13px;
+    top: 14px;
+    background: black;
+}
+
+
+/*////////////////////////////////////////TABLE///////////////////////////*/
+
+.country-rates__table-column{
+    border-bottom: 1px solid #d6d6d5;
+    padding: 5px;
+    text-align: left;
+}
+
+.country-rates__column-code{
+    width: 40%;
+    overflow-wrap: break-word;
+}
+
+.country-rates__table-container{
+    padding: 30px 0;
+    width: 100%;
+}
+
+.country-rates__table{
+    width:100%;
+    position: relative;
+}
+
+.country-rates__table-body{
+    text-align: center;
+}
+
+.country-rates__table-row{
+    height: 50px;
+    position: relative;
+}
+
+/*//////////////////LOADER*/
+
+.country-rates__preloader_text{
+    position: absolute;
+    font-size:20px;
+    background: deepskyblue;
+    color:white;
+    left:0;
+    right:0;
+}
+
+.country-rates__preloader{
+    position: absolute;
+    top: 80px;
+    left: 40%;
+    transform: translate(-40%, -50%);
+    animation: effect 1s linear infinite;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #49cdff;
+}
+
+@-webkit-keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes effect {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.country-list-preloader:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 20px;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 20px;
+    }
+}

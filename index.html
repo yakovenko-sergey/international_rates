@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test task</title>
+    <link rel="stylesheet" href="./css/country-code.css">
+</head>
+<body>
+<div class="country-rates__wrapper">
+    <div class="country-rates__input-container">
+        <input class="country-rates__input" readonly="readonly" placeholder="Select country">
+        <div class="country-rates__country-list"></div>
+    </div>
+    <div class="country-rates__table-container">
+        <table class="country-rates__table">
+            <thead>
+            <tr class="country-rates__table-row">
+                <th class="country-rates__table-column">Country</th>
+                <th class="country-rates__table-column">Type</th>
+                <th class="country-rates__table-column">Code</th>
+                <th class="country-rates__table-column">Rate per minute</th>
+            </tr>
+            </thead>
+            <tbody class="country-rates__table-body"></tbody>
+        </table>
+
+    </div>
+</div>
+<script src="./js/country-code.js"></script>
+<script type="text/javascript" src="http://www.ringcentral.com/api/index.php?cmd=getCountries&amp;typeResponse=json&amp;callback=createCountryList"></script>
+</body>
+</html>
